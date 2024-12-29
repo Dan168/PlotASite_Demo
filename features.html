@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PlotASite - Home</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.7.2/font/bootstrap-icons.min.css" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding-top: 25px;
+      font-family: 'Montserrat', sans-serif;
+      background-color: #f4f4f9;
+    }
+
+    .navbar {
+      background-color: #ffffff;
+    }
+
+    .navbar-brand img {
+      height: 50px;
+    }
+
+    .navbar-nav .nav-link {
+      color: #000000 !important;
+      font-weight: 600;
+    }
+
+    .navbar-nav .nav-link:hover {
+      color: #FFC107 !important;
+    }
+
+    .navbar-toggler {
+      border-color: black;
+    }
+
+    .navbar-toggler .navbar-toggler-icon {
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba%280, 0, 0, 1%29' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+    }
+
+    .header {
+      background-color: #FFC107;
+      padding: 70px 0;
+    }
+
+    .header h1 {
+      color: #343a40;
+      font-size: 2.5rem;
+      font-weight: 700;
+    }
+
+    .header p {
+      color: #343a40;
+      font-size: 1.25rem;
+    }
+
+    section {
+      padding: 60px 0;
+    }
+
+    section h2 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 40px;
+    }
+
+    .white-box i {
+      position: absolute;
+      color: #FFC107;
+    }
+
+    .white-box i {
+      top: 10px;
+      left: 10px;
+    }
+
+    .white-box h4 {
+      margin-top: 30px;
+    }
+
+    .container p {
+      font-size: 1.25rem;
+      margin-bottom: 30px;
+    }
+
+    .info-item .icon {
+      font-size: 2rem;
+      color: #FFC107;
+      margin-right: 20px;
+    }
+
+    .info-item .content {
+      flex: 1;
+    }
+
+    .info-item .image {
+      flex: 0 0 30%;
+      text-align: right;
+    }
+
+    .info-item .image img {
+      max-width: 100%;
+      border-radius: 10px;
+    }
+
+    .footer {
+      background-color: #343a40;
+      color: white;
+    }
+
+    .footer-top {
+      background-color: #FFC107;
+      padding: 30px 0;
+    }
+
+    .footer-logo {
+      width: 150px;
+      margin-bottom: 20px;
+    }
+
+    .contact-info h3 {
+      font-weight: bold;
+    }
+
+    .contact-info p {
+      margin: 0;
+    }
+
+    .footer-bottom {
+      background-color: #ffffff;
+      padding: 20px 0;
+    }
+
+    .footer-bottom p {
+      margin: 0;
+      font-size: 14px;
+      color: black;
+    }
+
+    .social-media {
+      margin: 10px 0;
+    }
+
+    .social-icon {
+      color: #000000;
+      margin: 0 10px;
+      font-size: 24px;
+      text-decoration: none;
+    }
+
+    .footer-links {
+      margin-top: 10px;
+    }
+
+    .footer-links a {
+      color: #000000;
+      margin: 0 10px;
+      font-size: 14px;
+      text-decoration: none;
+    }
+
+    .footer-links a:hover {
+      text-decoration: underline;
+    }
+
+    .info-section .info-item {
+      text-align: center;
+    }
+
+    .info-section .icon {
+      font-size: 5rem; /* Increase icon size */
+      color: #FFC107;
+      margin-bottom: 20px;
+    }
+
+    .info-section .content h3 {
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+    }
+
+    .info-section .content p {
+      font-size: 1rem;
+      margin: 0;
+    }
+
+    @media (max-width: 768px) {
+      .info-section .row {
+        flex-direction: column;
+      }
+
+      .info-section .col-md-4 {
+        flex: 0 0 100%;
+      }
+    }
+
+    .features-section {
+      padding: 60px 0;
+      background-color: #ffffff;
+    }
+
+    .features-section h2 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 40px;
+      text-align: center;
+    }
+
+    .feature-box {
+      background-color: #fff;
+      border-radius: 10px;
+      padding: 20px;
+      margin-bottom: 30px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s;
+    }
+
+    .feature-box:hover {
+      transform: translateY(-10px);
+    }
+
+    .feature-box h4 {
+      font-size: 1.25rem;
+      font-weight: 600;
+      margin-top: 20px;
+    }
+
+    .feature-box p {
+      font-size: 1rem;
+      margin: 10px 0;
+    }
+
+    .feature-box i {
+      font-size: 2rem;
+      color: #FFC107;
+    }
+
+    .benefit-text {
+      font-size: 1.25rem; /* Increase the font size for benefits */
+      margin-left: 10px;
+    }
+
+    #key-benefits .row {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    #key-benefits .col-md-6 {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+  </style>
+</head>
+
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+  <a class="navbar-brand" href="index.html">
+    <img src="logo.png" alt="PlotASite Logo">
+  </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="index.html">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="how_it_works.html">How It Works</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="features.html">Features</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="resources.html">Resources</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="contact.html">Contact</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<header class="header text-center text-md-left">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-md-6">
+        <h1>KEY FEATURES</h1>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section id="features" class="features-section">
+  <div class="container">
+    <i><h2>Key Features of PlotASite</h2></i>
+    <div class="row">
+      <div class="col-md-6">
+        <div class="feature-box text-center">
+          <i class="bi bi-tools"></i>
+          <h4>One Stop Solution</h4>
+          <p>No more jumping from one system to another. PlotASite delivers an end-to-end solution from client enquiry to completed job pack.</p>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="feature-box text-center">
+          <i class="bi bi-person"></i>
+          <h4>Easy to Use</h4>
+          <p>Requires no training and de-skills the process. No CAD or other design skills necessary. Create professional site plans to scale with ease.</p>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="feature-box text-center">
+          <i class="bi bi-pencil-square"></i>
+          <h4>Customizable</h4>
+          <p>Create your own products, risk assessments, method statements, documentation, and checks.</p>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="feature-box text-center">
+          <i class="bi bi-cloud"></i>
+          <h4>Cloud-Based</h4>
+          <p>Up-to-the-minute information from any device, anywhere for your entire team. Colleagues can input and assist your site plan in real-time.</p>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="feature-box text-center">
+          <i class="bi bi-box-seam"></i>
+          <h4>Product Management Tool</h4>
+          <p>Maintain your product inventory including specifications and video. Confirm the most suitable products for site plans with your client live on site.</p>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="feature-box text-center">
+          <i class="bi bi-shield-check"></i>
+          <h4>Compliance</h4>
+          <p>Performs all your configured on-site compliance, risk management, method statements, and all legal and safety checks.</p>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="feature-box text-center">
+          <i class="bi bi-file-earmark-text"></i>
+          <h4>Quotations and Jobs</h4>
+          <p>Instantly share quotes and jobs with colleagues and clients for approval.</p>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="feature-box text-center">
+          <i class="bi bi-bar-chart"></i>
+          <h4>Reports</h4>
+          <p>Dashboard and report tools achieve business insights.</p>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="feature-box text-center">
+          <i class="bi bi-shield-lock"></i>
+          <h4>Secure</h4>
+          <p>All data stored securely and permission-controlled features for data integrity.</p>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="feature-box text-center">
+          <i class="bi bi-headset"></i>
+          <h4>Fully Supported</h4>
+          <p>Including phone calls, online screen share sessions, and email with guaranteed response times.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="key-benefits" class="py-5 text-center">
+  <div class="container">
+    <i><h2>Key Benefits of PlotASite</h2></i>
+    <div class="row justify-content-center">
+      <div class="col-md-10">
+        <div class="row">
+          <div class="col-md-6 text-left">
+            <p><i class="bi bi-check-circle-fill text-dark"></i> <span class="benefit-text">PlotASite empowers mobile workers and encourages collaboration with colleagues and clients.</span></p>
+            <p><i class="bi bi-check-circle-fill text-dark"></i> <span class="benefit-text">Connects your back-office team with your mobile workforce.</span></p>
+            <p><i class="bi bi-check-circle-fill text-dark"></i> <span class="benefit-text">Greatly reduces time spent creating jobs and quotes.</span></p>
+            <p><i class="bi bi-check-circle-fill text-dark"></i> <span class="benefit-text">Streamlines the process of all site operations.</span></p>
+            <p><i class="bi bi-check-circle-fill text-dark"></i> <span class="benefit-text">Improves your conversion rate and revenues.</span></p>
+          </div>
+          <div class="col-md-6 text-left">
+            <p><i class="bi bi-check-circle-fill text-dark"></i> <span class="benefit-text">Allows project organizers and inventory management teams to plan accurately.</span></p>
+            <p><i class="bi bi-check-circle-fill text-dark"></i> <span class="benefit-text">Identify trends in site performance.</span></p>
+            <p><i class="bi bi-check-circle-fill text-dark"></i> <span class="benefit-text">Reduces your carbon footprint.</span></p>
+            <p><i class="bi bi-check-circle-fill text-dark"></i> <span class="benefit-text">Rapid return on investment.</span></p>
+            <p><i class="bi bi-check-circle-fill text-dark"></i> <span class="benefit-text">Delivers a professional and faster turnaround that builds customer relations.</span></p>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer-top">
+    <div class="container text-center">
+      <img src="logo.png" alt="PlotASite Logo" class="footer-logo">
+      <div class="contact-info">
+        <h3>CONTACT US</h3>
+        <p>Ranger Data Systems Limited</p>
+        <p>0330 133 2545</p>
+        <p>info@plotasite.com</p>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="container text-center">
+      <p>&copy; 2024 PlotASite. All rights reserved.</p>
+      <div class="social-media">
+        <a href="https://www.linkedin.com" target="_blank" class="social-icon">
+          <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="https://www.youtube.com" target="_blank" class="social-icon">
+          <i class="fab fa-youtube"></i>
+        </a>
+      </div>
+      <div class="footer-links">
+        <a href="privacy.html">Privacy</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+<script async data-id="101457314" src="//static.getclicky.com/js"></script>
+
+</html>

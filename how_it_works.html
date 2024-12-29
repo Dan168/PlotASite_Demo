@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PlotASite - Home</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.7.2/font/bootstrap-icons.min.css" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding-top: 25px;
+            font-family: 'Montserrat', sans-serif;
+            background-color: #f4f4f9;
+        }
+
+        .navbar {
+            background-color: #ffffff;
+        }
+
+        .navbar-brand img {
+            height: 50px;
+        }
+
+        .navbar-nav .nav-link {
+            color: #000000 !important;
+            font-weight: 600;
+        }
+
+        .navbar-nav .nav-link:hover {
+            color: #FFC107 !important;
+        }
+
+        .navbar-toggler {
+            border-color: black;
+        }
+
+        .navbar-toggler .navbar-toggler-icon {
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba%280, 0, 0, 1%29' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+        }
+
+        .header {
+            background-color: #FFC107;
+            padding: 70px 0;
+        }
+
+        .header h1 {
+            color: #343a40;
+            font-size: 2.5rem;
+            font-weight: 700;
+        }
+
+        .header p {
+            color: #343a40;
+            font-size: 1.25rem;
+        }
+
+        section {
+            padding: 60px 0;
+        }
+
+        section h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 40px;
+        }
+
+        .yellow-container {
+            background-color: #FFC107;
+            padding: 60px 0;
+        }
+
+        .white-box {
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 20px;
+            position: relative;
+            height: 100%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+
+        .white-box:hover {
+            transform: translateY(-10px);
+        }
+
+        .white-box i {
+            position: absolute;
+            color: #FFC107;
+        }
+
+        .white-box i.top-left {
+            top: 10px;
+            left: 10px;
+        }
+
+        .white-box h4 {
+            margin-top: 30px;
+        }
+
+        .container p.lead {
+            font-size: 1.25rem;
+            margin-bottom: 30px;
+        }
+
+        .embed-responsive {
+            margin-bottom: 40px;
+        }
+
+        .info-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .info-item .icon {
+            font-size: 2rem;
+            color: #FFC107;
+            margin-right: 20px;
+        }
+
+        .info-item .content {
+            flex: 1;
+        }
+
+        .info-item .image {
+            flex: 0 0 30%;
+            text-align: right;
+        }
+
+        .info-item .image img {
+            max-width: 100%;
+            border-radius: 10px;
+        }
+
+        .bg-light-gray {
+            background-color: #f4f4f9;
+        }
+
+        .footer {
+            background-color: #343a40;
+            color: white;
+        }
+
+        .footer-top {
+            background-color: #FFC107;
+            padding: 30px 0;
+        }
+
+        .footer-logo {
+            width: 150px;
+            margin-bottom: 20px;
+        }
+
+        .contact-info h3 {
+            font-weight: bold;
+        }
+
+        .contact-info p {
+            margin: 0;
+        }
+
+        .footer-bottom {
+            background-color: #ffffff;
+            padding: 20px 0;
+        }
+
+        .footer-bottom p {
+            margin: 0;
+            font-size: 14px;
+            color: black;
+        }
+
+        .social-media {
+            margin: 10px 0;
+        }
+
+        .social-icon {
+            color: #000000;
+            margin: 0 10px;
+            font-size: 24px;
+            text-decoration: none;
+        }
+
+        .footer-links {
+            margin-top: 10px;
+        }
+
+        .footer-links a {
+            color: #000000;
+            margin: 0 10px;
+            font-size: 14px;
+            text-decoration: none;
+        }
+
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
+
+        .info-section {
+            background-color: #f4f4f9;
+            padding: 60px 0;
+        }
+
+        .info-section .info-item {
+            text-align: center;
+        }
+
+        .info-section .icon {
+            font-size: 5rem; /* Increase icon size */
+            color: #FFC107;
+            margin-bottom: 20px;
+        }
+
+        .info-section .content h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+
+        .info-section .content p {
+            font-size: 1rem;
+            margin: 0;
+        }
+
+        @media (max-width: 768px) {
+            .info-section .row {
+                flex-direction: column;
+            }
+
+            .info-section .col-md-4 {
+                flex: 0 0 100%;
+            }
+        }
+
+        .btn-yellow {
+            background-color: #FFC107;
+            color: #343a40;
+            font-weight: 700;
+            padding: 10px 20px;
+            border-radius: 5px;
+            border: none;
+            font-size: 1rem;
+            text-align: center;
+            display: inline-block;
+            margin-top: 20px;
+        }
+
+        .btn-yellow:hover {
+            background-color: #e0a800;
+            color: #343a40;
+        }
+
+        .d-flex-center {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        .info-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .icon {
+            font-size: 2rem; /* Adjust the size as needed */
+            height: 3rem; /* Set a fixed height for the icon container */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1rem; /* Space between the icon and the content */
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 2rem;
+            color: #333;
+        }
+
+        .custom-card {
+            border: 1px solid #e0e0e0;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .custom-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+        }
+
+        .card-img-top {
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .card-body {
+            padding: 1.5rem;
+        }
+
+        .card-text {
+            font-size: 1rem;
+            color: #666;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <a class="navbar-brand" href="index.html">
+        <img src="logo.png" alt="PlotASite Logo">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="how_it_works.html">How It Works</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="features.html">Features</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="resources.html">Resources</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<header class="header text-center text-md-left">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-md-6">
+                <h1>HOW IT WORKS</h1>
+            </div>
+        </div>
+    </div>
+</header>
+
+<section class="container py-5">
+    <i><h2 class="text-center mb-4">Watch our short video explaining how PlotASite works.</h2></i>
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="embed-responsive embed-responsive-16by9">
+                <iframe class="embed-responsive-item"
+                        src="https://www.dropbox.com/scl/fi/95jdkov3083xryiojsr0p/Plot-A-Site-New-with-last-sentence.mp4?rlkey=8kgw366qk6xbpldlan8cug0te&e=2&raw=1"
+                        allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="d-flex-center">
+    <a href="contact.html" class="btn btn-yellow">Let's Talk</a>
+</div>
+
+<section id="who-it-can-help" class="info-section bg-light-gray py-5">
+    <div class="container">
+        <i><h2 class="text-center mb-4">The PlotASite Lifecycle</h2></i>
+        <h3 align="center">From initial site enquiry through to site installation...</h3>
+        <br>
+        <br>
+        <div class="row text-center">
+            <div class="col-md-4 mb-4">
+                <div class="info-item">
+                    <div class="icon">
+                        <i class="bi bi-pencil-square"></i>
+                    </div>
+                    <div class="content">
+                        <h3>Initial Enquiry</h3>
+                        <p>New site requirements can be created from scratch by field workers or by office-based staff. Office users enter preliminary site details including job scope, site visit date, supporting images, and advisory comments.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="info-item">
+                    <div class="icon">
+                        <i class="bi bi-calendar-check"></i>
+                    </div>
+                    <div class="content">
+                        <h3>Job Allocation</h3>
+                        <p>The job is allocated to the appropriate field worker via the Scheduling tool. The field worker automatically receives an alert to their mobile devices with site details in preparation for the site visit.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="info-item">
+                    <div class="icon">
+                        <i class="bi bi-briefcase"></i>
+                    </div>
+                    <div class="content">
+                        <h3>Site Allocation</h3>
+                        <p>PlotASite promotes engagement with clients and colleagues when performing site drawings.
+                            Brainstorm site layouts and best solutions with all your product information at your
+                            fingertips.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="info-item">
+                    <div class="icon">
+                        <i class="bi bi-geo-alt"></i>
+                    </div>
+                    <div class="content">
+                        <h3>Site Visit</h3>
+                        <p>Field workers select the job on the tablet upon arrival at the site. PlotASite shows an overhead view of the site on the screen. Confirm the site location and boundaries, then draw the position of products required on the screen. PlotASite shows all site and product dimensions in meters. Select the product required from your inventory. View product specifications including images and videos to confirm the best product.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="info-item">
+                    <div class="icon">
+                        <i class="bi bi-camera"></i>
+                    </div>
+                    <div class="content">
+                        <h3>Capturing Data</h3>
+                        <p>Your products have their dimensions stored, so the selected product instantly appears on the image to scale and with the quantity required. Product totals are automatically calculated, including accessories if applicable. Add supporting information to the site layout including lines, areas, and explanatory comments. Capture additional on-site images, including the route to the site and key dates. Perform your checklists and risk management requirements. Capture client signatures and confirm the site survey as complete.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="info-item">
+                    <div class="icon">
+                        <i class="bi bi-eye"></i>
+                    </div>
+                    <div class="content">
+                        <h3>Office Review</h3>
+                        <p>The job status automatically changes to completed. Permitted users can review site details prior to sharing with the client for approval. The site job pack can be shared as a PDF with colleagues and clients for quotation purposes.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="bg-light py-5 text-center">
+    <div class="container">
+        <i><h2 class="section-title">Take a Look</h2></i>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card custom-card mb-4">
+                    <img src="grid_1.JPG" class="card-img-top" alt="Site drawing on iPad">
+                    <div class="card-body">
+                        <p class="card-text">Site drawing on iPad showing your products to scale</p>
+                    </div>
+                </div>
+                <div class="card custom-card mb-4">
+                    <img src="grid_2.JPG" class="card-img-top" alt="Product totals calculation">
+                    <div class="card-body">
+                        <p class="card-text">Product totals automatically calculate</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card custom-card mb-4">
+                    <img src="grid_3.JPG" class="card-img-top" alt="Safety checks">
+                    <div class="card-body">
+                        <p class="card-text">Perform your safety checks on site</p>
+                    </div>
+                </div>
+                <div class="card custom-card mb-4">
+                    <img src="grid_4.jpg" class="card-img-top" alt="Site images and details">
+                    <div class="card-body">
+                        <p class="card-text">Captures site images & route to site details to form part of Job Pack</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<footer class="footer">
+    <div class="footer-top">
+        <div class="container text-center">
+            <img src="logo.png" alt="PlotASite Logo" class="footer-logo">
+            <div class="contact-info">
+                <h3>CONTACT US</h3>
+                <p>Ranger Data Systems Limited</p>
+                <p>0330 133 2545</p>
+                <p>info@plotasite.com</p>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <div class="container text-center">
+            <p>&copy; 2024 PlotASite. All rights reserved.</p>
+            <div class="social-media">
+                <a href="https://www.linkedin.com" target="_blank" class="social-icon">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://www.youtube.com" target="_blank" class="social-icon">
+                    <i class="fab fa-youtube"></i>
+                </a>
+            </div>
+            <div class="footer-links">
+                <a href="privacy.html">Privacy</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+<script async data-id="101457314" src="//static.getclicky.com/js"></script>
+
+</html>

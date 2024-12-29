@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PlotASite - Home</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.7.2/font/bootstrap-icons.min.css" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding-top: 25px;
+      font-family: 'Montserrat', sans-serif;
+      background-color: #f4f4f9;
+    }
+
+    .navbar {
+      background-color: #ffffff;
+    }
+
+    .navbar-brand img {
+      height: 50px;
+    }
+
+    .navbar-nav .nav-link {
+      color: #000000 !important;
+      font-weight: 600;
+    }
+
+    .navbar-nav .nav-link:hover {
+      color: #FFC107 !important;
+    }
+
+    .navbar-toggler {
+      border-color: black;
+    }
+
+    .navbar-toggler .navbar-toggler-icon {
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba%280, 0, 0, 1%29' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+    }
+
+    .header {
+      background-color: #FFC107;
+      padding: 70px 0;
+    }
+
+    .header h1 {
+      color: #343a40;
+      font-size: 2.5rem;
+      font-weight: 700;
+    }
+
+    .header p {
+      color: #343a40;
+      font-size: 1.25rem;
+    }
+
+    section {
+      padding: 60px 0;
+    }
+
+    section h2 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 40px;
+    }
+
+    .yellow-container {
+      background-color: #FFC107;
+      padding: 60px 0;
+    }
+
+    .white-box {
+      background-color: #fff;
+      border-radius: 10px;
+      padding: 20px;
+      position: relative;
+      height: 100%;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s;
+    }
+
+    .white-box:hover {
+      transform: translateY(-10px);
+    }
+
+    .white-box i {
+      position: absolute;
+      color: #FFC107;
+    }
+
+    .white-box i.top-left {
+      top: 10px;
+      left: 10px;
+    }
+
+    .white-box h4 {
+      margin-top: 30px;
+    }
+
+    .container p.lead {
+      font-size: 1.25rem;
+      margin-bottom: 30px;
+    }
+
+    .embed-responsive {
+      margin-bottom: 40px;
+    }
+
+    .video-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+
+    .video-box {
+      flex: 0 0 68%;
+      margin-right: 2%;
+    }
+
+    .info-boxes {
+      flex: 0 0 30%;
+    }
+
+    .info-box {
+      margin-bottom: 20px;
+    }
+
+    @media (max-width: 768px) {
+      .video-container {
+        flex-direction: column;
+      }
+
+      .video-box,
+      .info-boxes {
+        flex: 0 0 100%;
+        margin-right: 0;
+      }
+    }
+
+    .info-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    .info-item .icon {
+      font-size: 2rem;
+      color: #FFC107;
+      margin-right: 20px;
+    }
+
+    .info-item .content {
+      flex: 1;
+    }
+
+    .info-item .image {
+      flex: 0 0 30%;
+      text-align: right;
+    }
+
+    .info-item .image img {
+      max-width: 100%;
+      border-radius: 10px;
+    }
+
+    .bg-light-gray {
+      background-color: #f4f4f9;
+    }
+
+    .footer {
+      background-color: #343a40;
+      color: white;
+    }
+
+    .footer-top {
+      background-color: #FFC107;
+      padding: 30px 0;
+    }
+
+    .footer-logo {
+      width: 150px;
+      margin-bottom: 20px;
+    }
+
+    .contact-info h3 {
+      font-weight: bold;
+    }
+
+    .contact-info p {
+      margin: 0;
+    }
+
+    .footer-bottom {
+      background-color: #ffffff;
+      padding: 20px 0;
+    }
+
+    .footer-bottom p {
+      margin: 0;
+      font-size: 14px;
+      color: black;
+    }
+
+    .social-media {
+      margin: 10px 0;
+    }
+
+    .social-icon {
+      color: #000000;
+      margin: 0 10px;
+      font-size: 24px;
+      text-decoration: none;
+    }
+
+    .footer-links {
+      margin-top: 10px;
+    }
+
+    .footer-links a {
+      color: #000000;
+      margin: 0 10px;
+      font-size: 14px;
+      text-decoration: none;
+    }
+
+    .footer-links a:hover {
+      text-decoration: underline;
+    }
+
+    .info-section {
+      background-color: #f4f4f9;
+      padding: 60px 0;
+    }
+
+    .info-section .info-item {
+      text-align: center;
+    }
+
+    .info-section .icon {
+      font-size: 5rem; /* Increase icon size */
+      color: #FFC107;
+      margin-bottom: 20px;
+    }
+
+    .info-section .content h3 {
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+    }
+
+    .info-section .content p {
+      font-size: 1rem;
+      margin: 0;
+    }
+
+    @media (max-width: 768px) {
+      .info-section .row {
+        flex-direction: column;
+      }
+
+      .info-section .col-md-4 {
+        flex: 0 0 100%;
+      }
+    }
+
+    .features-section {
+      padding: 60px 0;
+      background-color: #ffffff;
+    }
+
+    .features-section h2 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 40px;
+      text-align: center;
+    }
+
+    .feature-box {
+      background-color: #fff;
+      border-radius: 10px;
+      padding: 20px;
+      margin-bottom: 30px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s;
+    }
+
+    .feature-box:hover {
+      transform: translateY(-10px);
+    }
+
+    .feature-box h4 {
+      font-size: 1.25rem;
+      font-weight: 600;
+      margin-top: 20px;
+    }
+
+    .feature-box p {
+      font-size: 1rem;
+      margin: 10px 0;
+    }
+
+    .feature-box i {
+      font-size: 2rem;
+      color: #FFC107;
+    }
+
+    .benefit-text {
+      font-size: 1.25rem; /* Increase the font size for benefits */
+      margin-left: 10px;
+    }
+
+    .pricing-box {
+      background-color: #ffffff;
+      border: 1px solid #e0e0e0;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s;
+    }
+
+    .pricing-box:hover {
+      transform: translateY(-10px);
+    }
+
+    .pricing-box h3 {
+      font-size: 1.5rem;
+      font-weight: 700;
+    }
+
+    .pricing-box p {
+      font-size: 1.25rem;
+      margin-bottom: 20px;
+    }
+
+    .pricing-box ul {
+      padding-left: 0;
+    }
+
+    .pricing-box ul li {
+      font-size: 1rem;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+  <a class="navbar-brand" href="index.html">
+    <img src="logo.png" alt="PlotASite Logo">
+  </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="index.html">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="how_it_works.html">How It Works</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="features.html">Features</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="pricing.html">Pricing</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="contact.html">Contact</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<header class="header text-center text-md-left">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-md-6">
+        <h1>PRICING</h1>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- Pricing 1 - Bootstrap Brain Component -->
+<section class="bsb-pricing-1 bg-light py-3 py-md-5 py-xl-8">
+  <div class="container">
+    <div class="row gy-5 gy-lg-0 align-items-center">
+      <div class="col-12 col-lg-4">
+        <h2 class="display-5 mb-3 mb-xl-4">Monthly or Annual</h2>
+        <p class="lead mb-4 mb-xl-5">Explore our flexible pricing to find an excellent fit to run your business.</p>
+      </div>
+      <div class="col-12 col-lg-8">
+        <div class="row justify-content-xl-end">
+          <div class="col-12 col-xl-11">
+            <div class="row gy-4 gy-md-0 gx-xxl-5">
+              <div class="col-12 col-md-6">
+                <div class="card border-0 border-bottom border-primary shadow-sm">
+                  <div class="card-body p-4 p-xxl-5">
+                    <h2 class="h4 mb-2">Monthly</h2>
+                    <h4 class="display-3 fw-bold text-primary mb-0">$45</h4>
+                    <p class="text-secondary mb-4">USD / Month</p>
+                    <ul class="list-group list-group-flush mb-4">
+                      <li class="list-group-item">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check" viewBox="0 0 16 16">
+                          <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z" />
+                        </svg>
+                        <span><strong>Row</strong> One</span>
+                      </li>
+                      <li class="list-group-item">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check" viewBox="0 0 16 16">
+                          <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z" />
+                        </svg>
+                        <span><strong>Row</strong> Two</span>
+                      </li>
+                      <li class="list-group-item">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check" viewBox="0 0 16 16">
+                          <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z" />
+                        </svg>
+                        <span><strong>Row</strong> Three</span>
+                      </li>
+                      <li class="list-group-item">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-x text-danger" viewBox="0 0 16 16">
+                          <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
+                        </svg>
+                        <span>Another <strong>Row</strong></span>
+                      </li>
+                      <li class="list-group-item">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-x text-danger" viewBox="0 0 16 16">
+                          <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
+                        </svg>
+                        <span>Another <strong>Row</strong></span>
+                      </li>
+                    </ul>
+                    <a href="#!" class="btn bsb-btn-2xl btn-primary rounded-pill">Choose Plan</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-md-6">
+                <div class="card border-0 border-bottom border-primary shadow-lg pt-md-4 pb-md-4 bsb-pricing-popular">
+                  <div class="card-body p-4 p-xxl-5">
+                    <h2 class="h4 mb-2">Annual (Best Value)</h2>
+                    <h4 class="display-3 fw-bold text-primary mb-0">$149</h4>
+                    <p class="text-secondary mb-4">USD / Month</p>
+                    <ul class="list-group list-group-flush mb-4">
+                      <li class="list-group-item">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check" viewBox="0 0 16 16">
+                          <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z" />
+                        </svg>
+                        <span><strong>20</strong> Bootstrap Install</span>
+                      </li>
+                      <li class="list-group-item">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check" viewBox="0 0 16 16">
+                          <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z" />
+                        </svg>
+                        <span><strong>400,000</strong> Visits</span>
+                      </li>
+                      <li class="list-group-item">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check" viewBox="0 0 16 16">
+                          <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z" />
+                        </svg>
+                        <span><strong>50 GB</strong> Disk Space</span>
+                      </li>
+                      <li class="list-group-item">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check" viewBox="0 0 16 16">
+                          <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z" />
+                        </svg>
+                        <span>Free <strong>SSL and CDN</strong></span>
+                      </li>
+                      <li class="list-group-item">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check" viewBox="0 0 16 16">
+                          <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z" />
+                        </svg>
+                        <span>Free <strong>Support</strong></span>
+                      </li>
+                    </ul>
+                    <a href="#!" class="btn bsb-btn-2xl btn-primary rounded-pill">Choose Plan</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Pricing 2 - Bootstrap Brain Component -->
+<section class="bsb-pricing-2 bg-light py-5 py-xl-8">
+  <div class="container">
+    <div class="row justify-content-md-center">
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row gy-5 gy-lg-0 gx-xl-5">
+      <div class="col-12 col-lg-4">
+        <div class="card border-0 border-bottom border-primary shadow-sm">
+          <div class="card-body p-4 p-xxl-5">
+            <h2 class="h4 mb-2">Level 1</h2>
+            <h4 class="display-3 fw-bold text-primary mb-0">£100</h4>
+            <p class="text-secondary mb-4">GBP / Month</p>
+            <ul class="list-group list-group-flush mb-4">
+              <li class="list-group-item">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check" viewBox="0 0 16 16">
+                  <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z" />
+                </svg>
+                <span><strong>5</strong> Bootstrap Install</span>
+              </li>
+              <li class="list-group-item">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check" viewBox="0 0 16 16">
+                  <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z" />
+                </svg>
+                <span><strong>100,000</strong> Visits</span>
+              </li>
+              <li class="list-group-item">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check" viewBox="0 0 16 16">
+                  <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z" />
+                </svg>
+                <span><strong>30 GB</strong> Disk Space</span>
+              </li>
+              <li class="list-group-item">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-x text-danger" viewBox="0 0 16 16">
+                  <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
+                </svg>
+                <span>Free <strong>SSL and CDN</strong></span>
+              </li>
+              <li class="list-group-item">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-x text-danger" viewBox="0 0 16 16">
+                  <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
+                </svg>
+                <span>Free <strong>Support</strong></span>
+              </li>
+              <li class="list-group-item">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-x text-danger" viewBox="0 0 16 16">
+                  <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
+                </svg>
+                <span><strong>Weekly</strong> Reports</span>
+              </li>
+            </ul>
+            <a href="#!" class="btn bsb-btn-xl btn-primary rounded-pill">Choose Plan</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-lg-4">
+        <div class="card border-0 border-bottom border-primary shadow-lg pt-md-4 pb-md-4 bsb-pricing-popular">
+          <div class="card-body p-4 p-xxl-5">
+            <h2 class="h4 mb-2">Level 2 (Most Popular)</h2>
+            <h4 class="display-3 fw-bold text-primary mb-0">£200</h4>
+            <p class="text-secondary mb-4">GBP / Month</p>
+            <ul class="list-group list-group-flush mb-4">
+              <li class="list-group-item">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check" viewBox="0 0 16 16">
+                  <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z" />
+                </svg>
+                <span><strong>20</strong> Bootstrap Install</span>
+              </li>
+              <li class="list-group-item">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check" viewBox="0 0 16 16">
+                  <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z" />
+                </svg>
+                <span><strong>250,000</strong> Visits</span>
+              </li>
+              <li class="list-group-item">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check" viewBox="0 0 16 16">
+                  <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z" />
+                </svg>
+                <span><strong>50 GB</strong> Disk Space</span>
+              </li>
+              <li class="list-group-item">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check" viewBox="0 0 16 16">
+                  <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z" />
+                </svg>
+                <span>Free <strong>SSL and CDN</strong></span>
+              </li>
+              <li class="list-group-item">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check" viewBox="0 0 16 16">
+                  <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z" />
+                </svg>
+                <span>Free <strong>Support</strong></span>
+              </li>
+              <li class="list-group-item">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-x text-danger" viewBox="0 0 16 16">
+                  <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
+                </svg>
+                <span><strong>Weekly</strong> Reports</span>
+              </li>
+            </ul>
+            <a href="#!" class="btn bsb-btn-xl btn-primary rounded-pill">Choose Plan</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-lg-4">
+        <div class="card border-0 border-bottom border-primary shadow-sm">
+          <div class="card-body p-4 p-xxl-5">
+            <h2 class="h4 mb-2">Level 3</h2>
+            <h4 class="display-3 fw-bold text-primary mb-0">£300</h4>
+            <p class="text-secondary mb-4">GBP / Month</p>
+            <ul class="list-group list-group-flush mb-4">
+              <li class="list-group-item">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check" viewBox="0 0 16 16">
+                  <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z" />
+                </svg>
+                <span><strong>50</strong> Bootstrap Install</span>
+              </li>
+              <li class="list-group-item">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check" viewBox="0 0 16 16">
+                  <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z" />
+                </svg>
+                <span><strong>400,000</strong> Visits</span>
+              </li>
+              <li class="list-group-item">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check" viewBox="0 0 16 16">
+                  <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z" />
+                </svg>
+                <span><strong>100 GB</strong> Disk Space</span>
+              </li>
+              <li class="list-group-item">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check" viewBox="0 0 16 16">
+                  <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z" />
+                </svg>
+                <span>Free <strong>SSL and CDN</strong></span>
+              </li>
+              <li class="list-group-item">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check" viewBox="0 0 16 16">
+                  <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z" />
+                </svg>
+                <span>Free <strong>Support</strong></span>
+              </li>
+              <li class="list-group-item">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check" viewBox="0 0 16 16">
+                  <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z" />
+                </svg>
+                <span><strong>Weekly</strong> Reports</span>
+              </li>
+            </ul>
+            <a href="#!" class="btn bsb-btn-xl btn-primary rounded-pill">Choose Plan</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer-top">
+    <div class="container text-center">
+      <img src="logo.png" alt="PlotASite Logo" class="footer-logo">
+      <div class="contact-info">
+        <h3>CONTACT US</h3>
+        <p>Ranger Data Systems Limited</p>
+        <p>0330 133 2545</p>
+        <p>info@plotasite.com</p>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="container text-center">
+      <p>&copy; 2024 PlotASite. All rights reserved.</p>
+      <div class="social-media">
+        <a href="https://www.linkedin.com" target="_blank" class="social-icon">
+          <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="https://www.youtube.com" target="_blank" class="social-icon">
+          <i class="fab fa-youtube"></i>
+        </a>
+      </div>
+      <div class="footer-links">
+        <a href="privacy.html">Privacy</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>
